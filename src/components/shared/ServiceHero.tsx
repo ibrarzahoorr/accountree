@@ -55,10 +55,12 @@ export default function ServiceHero({
   heading,
   heroImage,
   serviceName,
+  activeNav,
 }: {
   heading: string;
   heroImage: string;
   serviceName: string;
+  activeNav?: string;
 }) {
   return (
     <section className="relative w-full overflow-hidden bg-black py-6 sm:py-8 lg:py-10">
@@ -67,7 +69,7 @@ export default function ServiceHero({
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <Header />
+      <Header active={activeNav} />
 
       <div className="relative mx-auto max-w-[1512px] px-4 pt-[90px] sm:px-6 lg:px-8 lg:pt-[110px]">
         <div className="mx-auto max-w-[890px] rounded-[28px] border border-white/20 bg-white/10 p-5 text-center backdrop-blur-md sm:p-8 lg:p-10">
