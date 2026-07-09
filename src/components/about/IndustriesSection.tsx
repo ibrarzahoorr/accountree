@@ -33,6 +33,7 @@ export default function IndustriesSection() {
           src="/images/about/0-new-york-city-nyc-1920x1080-1-4a1d423c.png"
           alt="City skyline"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />

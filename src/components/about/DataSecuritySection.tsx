@@ -35,6 +35,7 @@ export default function DataSecuritySection() {
           src="/images/about/0-abstract-green-1280x720-1-d49da98a.png"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-white/85" />

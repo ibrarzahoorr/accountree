@@ -6,23 +6,62 @@ const benefits = [
   {
     title: "Focus on Growth",
     body: "Use your time to take on more clients and expand your offering.",
+    icon: "target" as const,
   },
   {
     title: "Resource Allocation",
     body: "Invest resources in providing the best experience for your clients.",
+    icon: "people" as const,
   },
   {
     title: "Scale Efficiently",
     body: "Grow your practice without the overhead of additional staff.",
+    icon: "trend" as const,
   },
 ];
 
-export default function CTASection() {
+function BenefitIcon({ type }: { type: "target" | "people" | "trend" }) {
+  if (type === "target") {
+    return (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#01b444" strokeWidth="1.4" />
+        <circle cx="10" cy="10" r="5.5" stroke="#01b444" strokeWidth="1.4" />
+        <circle cx="10" cy="10" r="2" fill="#01b444" />
+      </svg>
+    );
+  }
+  if (type === "people") {
+    return (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <circle cx="7" cy="6" r="3" stroke="#01b444" strokeWidth="1.4" />
+        <path d="M2 17c0-3 2.5-5 5-5s5 2 5 5" stroke="#01b444" strokeWidth="1.4" strokeLinecap="round" />
+        <circle cx="14.5" cy="7.5" r="2.4" stroke="#01b444" strokeWidth="1.4" />
+        <path d="M11.5 17c.3-2.5 2-4.2 4-4.2s3.7 1.7 4 4.2" stroke="#01b444" strokeWidth="1.4" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M2 14l5-5 3 3 6-7" stroke="#01b444" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 5h4v4" stroke="#01b444" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export default function CTASection({
+  tone = "gray",
+}: {
+  tone?: "gray" | "green";
+}) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <section className="mx-auto w-full max-w-[1512px] px-6 pt-16 lg:px-0 lg:pt-[161px]">
-      <div className="relative mx-auto w-full max-w-[1367px] rounded-[25px] bg-[#f2f2f2] px-6 py-12 sm:px-10 lg:px-[101px] lg:py-[134px]">
+      <div
+        className={`relative mx-auto w-full max-w-[1367px] rounded-[25px] px-6 py-12 sm:px-10 lg:px-[101px] lg:py-[134px] ${
+          tone === "green" ? "bg-[#eafbea]" : "bg-[#f2f2f2]"
+        }`}
+      >
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-[120px]">
           <div className="lg:w-[592px]">
             <h2 className="font-poppins text-3xl font-bold leading-[38px] text-[#4c4c4c] sm:text-5xl sm:leading-[56px]">
@@ -36,7 +75,9 @@ export default function CTASection() {
             <div className="mt-10 flex flex-col gap-6 lg:mt-[65px]">
               {benefits.map((b) => (
                 <div key={b.title} className="flex gap-3">
-                  <span className="mt-1 h-5 w-5 shrink-0 rounded-full bg-[#3a9b4b]" />
+                  <span className="mt-1 shrink-0">
+                    <BenefitIcon type={b.icon} />
+                  </span>
                   <div>
                     <p className="font-poppins text-xl font-bold text-[#4c4c4c] sm:text-[22px]">
                       {b.title}

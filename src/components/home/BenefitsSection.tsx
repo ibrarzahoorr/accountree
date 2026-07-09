@@ -49,9 +49,11 @@ export default function BenefitsSection() {
 
           <div className="relative mt-8 h-[220px] w-full overflow-hidden rounded-2xl sm:h-[280px] lg:hidden">
             <Image
-              src="/images/home/benefits-team-photo.png"
+              src="/images/home/benefits-team-photo-opt.jpg"
+              unoptimized
               alt="Team collaborating"
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>
@@ -72,9 +74,11 @@ export default function BenefitsSection() {
 
         <div className="relative hidden h-[210px] w-[437px] shrink-0 overflow-hidden rounded-2xl lg:block">
           <Image
-            src="/images/home/benefits-team-photo.png"
+            src="/images/home/benefits-team-photo-opt.jpg"
+              unoptimized
             alt="Team collaborating"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>

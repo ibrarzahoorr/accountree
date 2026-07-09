@@ -4,9 +4,9 @@ export default function ClientsSection() {
   return (
     <section className="mx-auto w-full max-w-[1512px] px-6 pt-16 lg:px-0 lg:pt-[161px]">
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row lg:px-[186px]">
-        <h2 className="font-poppins text-[22px] font-medium text-[#01b444]">
+        <span className="rounded-full border border-[#01b444] px-6 py-2 font-poppins text-[22px] font-medium text-[#01b444]">
           Our Clients
-        </h2>
+        </span>
         <div className="flex items-center gap-3">
           <div className="flex">
             {["1", "2", "3", "4"].map((n, i) => (
@@ -35,12 +35,22 @@ export default function ClientsSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-8 flex max-w-[1109px] items-center justify-center gap-4 lg:mt-[47px] lg:h-[557px]">
-        <div className="relative hidden h-[463px] w-[437px] shrink-0 overflow-hidden rounded-[21px] lg:block">
+      <p className="mx-auto mt-6 max-w-[820px] text-center font-poppins text-sm leading-[22px] text-[#4c4c4c] lg:text-base">
+        We&rsquo;re a UK-based team providing outsourced accounting support
+        exclusively for accountancy firms. Our delivery model connects you
+        with top-tier accounting talent from around the globe &ndash;
+        carefully selected, process-driven, and aligned to your firm&rsquo;s
+        exact way of working
+      </p>
+
+      <div className="relative mx-auto mt-8 flex max-w-[1109px] items-center justify-center gap-4 lg:mt-12 lg:h-[557px]">
+        <div className="relative hidden h-[463px] w-[437px] shrink-0 -rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
           <Image
-            src="/images/home/partner-photo-1.png"
+            src="/images/home/benefits-team-photo-opt.jpg"
+            unoptimized
             alt="Partner firm"
             fill
+            sizes="437px"
             className="object-cover"
           />
           <div
@@ -51,11 +61,13 @@ export default function ClientsSection() {
           />
         </div>
 
-        <div className="relative h-[420px] w-full overflow-hidden rounded-[21px] sm:h-[480px] lg:h-[557px] lg:w-[526px] lg:shrink-0">
+        <div className="relative z-10 h-[420px] w-full overflow-hidden rounded-[21px] shadow-xl sm:h-[480px] lg:h-[557px] lg:w-[526px] lg:shrink-0">
           <Image
-            src="/images/home/partner-photo-3.png"
+            src="/images/home/partner-photo-3-opt.jpg"
+            unoptimized
             alt="Multi-Partner Firms"
             fill
+            sizes="526px"
             className="object-cover"
           />
           <div
@@ -75,11 +87,13 @@ export default function ClientsSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[463px] w-[437px] shrink-0 overflow-hidden rounded-[21px] lg:block">
+        <div className="relative hidden h-[463px] w-[437px] shrink-0 rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
           <Image
-            src="/images/home/partner-photo-2.png"
+            src="/images/home/partner-photo-2-opt.jpg"
+            unoptimized
             alt="Partner firm"
             fill
+            sizes="437px"
             className="object-cover"
           />
           <div

@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
             </p>
             <div className="mt-6 flex items-center gap-3">
               <div className="relative h-[52px] w-[52px] overflow-hidden rounded-full">
-                <Image src={t.avatar} alt={t.name} fill className="object-cover" />
+                <Image src={t.avatar} alt={t.name} fill sizes="100vw" className="object-cover" />
               </div>
               <div>
                 <p className="font-poppins text-lg font-semibold">{t.name}</p>

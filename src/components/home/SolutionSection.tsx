@@ -34,6 +34,25 @@ export default function SolutionSection() {
   return (
     <section className="mx-auto w-full max-w-[1512px] px-6 pt-16 lg:px-0 lg:pt-[124px]">
       <div className="mx-auto max-w-[782px] text-center">
+        <svg
+          width="40"
+          height="37"
+          viewBox="0 0 40 37"
+          fill="none"
+          className="mx-auto mb-4"
+        >
+          <path
+            d="M20 0l3.5 3.2 4.7-1 1.9 4.5 4.8.8-0.3 4.9 4 2.9-2.6 4.1 2.6 4.1-4 2.9.3 4.9-4.8.8-1.9 4.5-4.7-1L20 37l-3.5-3.2-4.7 1-1.9-4.5-4.8-.8.3-4.9-4-2.9 2.6-4.1L1.4 13l4-2.9-.3-4.9 4.8-.8 1.9-4.5 4.7 1L20 0z"
+            fill="#00a63e"
+          />
+          <path
+            d="M13 19l4.5 4.5L27 14"
+            stroke="white"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <h2 className="font-poppins text-2xl font-semibold leading-[34px] text-black lg:text-[28px] lg:leading-[39px]">
           Outsourcing is the new solution
         </h2>
@@ -56,9 +75,11 @@ export default function SolutionSection() {
 
           <div className="relative mt-8 h-[300px] w-full overflow-hidden rounded-2xl shadow-xl sm:h-[380px] lg:hidden">
             <Image
-              src="/images/home/understanding-photo-1.png"
+              src="/images/home/understanding-photo-1-opt.jpg"
+              unoptimized
               alt="Accountree team presenting"
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>
@@ -94,9 +115,11 @@ export default function SolutionSection() {
         {/* Photo breaking out the top-right of the card (desktop only) */}
         <div className="pointer-events-none absolute left-[949px] top-[-37px] hidden h-[559px] w-[378px] overflow-hidden rounded-2xl shadow-xl lg:block">
           <Image
-            src="/images/home/understanding-photo-1.png"
+            src="/images/home/understanding-photo-1-opt.jpg"
+              unoptimized
             alt="Accountree team presenting"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>

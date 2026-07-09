@@ -1,16 +1,20 @@
 import Image from "next/image";
 
-const outsourceRows = [
+const outsourceLeft = [
   { title: "Cost effective", value: "60% more affordable" },
   { title: "Low Staff Turnover", value: "Less than 2%" },
-  { title: "High Scale/Growth", value: "Easy and Flexible" },
   { title: "Recruitment", value: "No Ads, No Agencies" },
 ];
+const outsourceRight = [
+  { title: "High Scale/Growth", value: "Easy and Flexible" },
+];
 
-const inHouseRows = [
+const inHouseLeft = [
   { title: "Cost Ineffective", value: "Full salary + Benefits + Allowance" },
   { title: "Higher Staff Turnover", value: "Industry Average 15%-20%" },
   { title: "Scale/Growth", value: "Difficult and time consuming" },
+];
+const inHouseRight = [
   { title: "Recruitment", value: "Ads + Agencies + time" },
 ];
 
@@ -21,8 +25,11 @@ export default function ComparisonSection({
 }) {
   return (
     <section className="mx-auto w-full max-w-[1512px] px-6 pt-20 text-center sm:px-8 lg:px-[146px] lg:pt-40">
-      <h2 className="font-poppins text-2xl font-semibold text-black sm:text-3xl lg:text-4xl">
-        Outsourced {serviceName} vs In-House
+      <h2 className="font-poppins text-2xl font-semibold sm:text-3xl lg:text-4xl">
+        <span className="bg-gradient-to-r from-[#3a9b4b] to-[#01b444] bg-clip-text text-transparent">
+          Outsourced {serviceName}
+        </span>{" "}
+        <span className="text-black">vs In-House</span>
       </h2>
       <p className="mx-auto mt-4 max-w-[773px] font-poppins text-base leading-[22px] text-black">
         Every account statement we prepare requires your approval We take
@@ -30,13 +37,21 @@ export default function ComparisonSection({
         accountants for revisions
       </p>
 
+      <div className="mt-6 flex items-center justify-center gap-2">
+        <span className="h-2.5 w-7 rounded-full bg-[#01b444]" />
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span key={i} className="h-2.5 w-2.5 rounded-full bg-[#d9d9d9]" />
+        ))}
+      </div>
+
       <div className="relative mx-auto mt-12 flex max-w-[1220px] flex-col justify-center gap-0 lg:mt-16 lg:flex-row lg:gap-6">
-        <div className="relative w-full overflow-hidden rounded-2xl lg:w-[504px]">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl lg:w-[504px]">
           <div className="relative h-[200px] w-full sm:h-[263px]">
             <Image
               src="/images/service-detail/rectangle-6079-5fd45b0c.png"
               alt={`Outsource ${serviceName}`}
               fill
+              sizes="100vw"
               className="object-cover"
             />
             <div
@@ -49,17 +64,31 @@ export default function ComparisonSection({
               {serviceName}
             </h3>
           </div>
-          <div className="grid grid-cols-2 gap-y-8 bg-white px-6 py-8 text-left">
-            {outsourceRows.map((r) => (
-              <div key={r.title}>
-                <p className="font-poppins text-base font-semibold text-black">
-                  {r.title}
-                </p>
-                <p className="mt-1 font-poppins text-base text-[#3a9b4b]">
-                  {r.value}
-                </p>
-              </div>
-            ))}
+          <div className="flex gap-x-6 bg-white px-6 py-8 text-left">
+            <div className="flex flex-1 flex-col gap-7">
+              {outsourceLeft.map((r) => (
+                <div key={r.title}>
+                  <p className="font-poppins text-base font-semibold text-black">
+                    {r.title}
+                  </p>
+                  <p className="mt-1 font-poppins text-base text-[#3a9b4b]">
+                    {r.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-1 flex-col gap-7">
+              {outsourceRight.map((r) => (
+                <div key={r.title}>
+                  <p className="font-poppins text-base font-semibold text-black">
+                    {r.title}
+                  </p>
+                  <p className="mt-1 font-poppins text-base text-[#3a9b4b]">
+                    {r.value}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -67,12 +96,13 @@ export default function ComparisonSection({
           VS
         </div>
 
-        <div className="relative w-full overflow-hidden rounded-2xl lg:w-[504px]">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl lg:w-[504px]">
           <div className="relative h-[200px] w-full sm:h-[262px]">
             <Image
               src="/images/service-detail/rectangle-6081-560f4e9d.png"
               alt={`In-house ${serviceName}`}
               fill
+              sizes="100vw"
               className="object-cover"
             />
             <div
@@ -85,17 +115,31 @@ export default function ComparisonSection({
               {serviceName}
             </h3>
           </div>
-          <div className="grid grid-cols-2 gap-y-8 bg-white px-6 py-8 text-left">
-            {inHouseRows.map((r) => (
-              <div key={r.title}>
-                <p className="font-poppins text-base font-semibold text-black">
-                  {r.title}
-                </p>
-                <p className="mt-1 font-poppins text-base text-[#beaaaa]">
-                  {r.value}
-                </p>
-              </div>
-            ))}
+          <div className="flex gap-x-6 bg-white px-6 py-8 text-left">
+            <div className="flex flex-1 flex-col gap-7">
+              {inHouseLeft.map((r) => (
+                <div key={r.title}>
+                  <p className="font-poppins text-base font-semibold text-black">
+                    {r.title}
+                  </p>
+                  <p className="mt-1 font-poppins text-base text-[#beaaaa]">
+                    {r.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-1 flex-col gap-7">
+              {inHouseRight.map((r) => (
+                <div key={r.title}>
+                  <p className="font-poppins text-base font-semibold text-black">
+                    {r.title}
+                  </p>
+                  <p className="mt-1 font-poppins text-base text-[#beaaaa]">
+                    {r.value}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

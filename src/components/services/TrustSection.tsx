@@ -18,6 +18,7 @@ export default function TrustSection() {
                 }.png`}
                 alt=""
                 fill
+                sizes="100vw"
                 className="object-cover"
               />
             </div>
@@ -39,14 +40,17 @@ export default function TrustSection() {
               src="/images/services/rectangle-6031-b2f01185.png"
               alt=""
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>
           <div className="relative h-[160px] w-1/2 overflow-hidden rounded-2xl sm:h-[199px] sm:w-[290px]">
             <Image
-              src="/images/services/handshake-two-people-business-suits-symbolizing-su-bc59b24a.png"
+              src="/images/services/handshake-opt.jpg"
+              unoptimized
               alt="Successful partnership agreement"
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>

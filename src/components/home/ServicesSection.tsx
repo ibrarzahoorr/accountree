@@ -6,7 +6,7 @@ const description =
 const cards = [
   {
     title: "Accounting Bookkeeping",
-    image: "/images/home/service-card-bookkeeping.png",
+    image: "/images/home/service-card-bookkeeping-opt.jpg",
     resources: "40+",
     activeClients: "460+",
   },
@@ -33,7 +33,7 @@ function ServiceCard({
   return (
     <div className="relative w-full max-w-[335px] rounded-[27px] bg-[#fbfafa] p-[17px]">
       <div className="relative h-[243px] w-full overflow-hidden rounded-2xl">
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image src={image} alt={title} fill unoptimized className="object-cover" />
         <div
           className="absolute inset-x-0 bottom-0 h-[156px]"
           style={{

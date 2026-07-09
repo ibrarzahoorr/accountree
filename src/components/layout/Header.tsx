@@ -36,31 +36,52 @@ export default function Header({
           />
         </Link>
 
-        <nav className="hidden items-center gap-[45px] lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={`font-poppins text-base font-medium ${
-                active === link.label ? "text-[#00a63e]" : textColor
-              }`}
+        <nav className="relative hidden h-12 w-[661px] items-center rounded-full lg:flex">
+          <div
+            className="absolute inset-0 rounded-full"
+            style={{
+              background: "linear-gradient(180deg, #8d8d8d 0%, #bcbcbc 100%)",
+              opacity: 0.46,
+            }}
+          />
+          <div className="relative z-10 flex w-full items-center pl-[27px] pr-8">
+            <svg
+              width="23"
+              height="14"
+              viewBox="0 0 23 14"
+              fill="none"
+              className="mr-[38px] shrink-0"
             >
-              {link.label}
-            </Link>
-          ))}
-          <button
-            type="button"
-            className={`flex items-center gap-1 font-poppins text-base font-medium ${textColor}`}
-          >
-            More Options
-            <Image
-              src="/icons/chevron-down.svg"
-              alt=""
-              width={21}
-              height={6}
-              className={`mt-0.5 ${variant === "light" ? "invert" : ""}`}
-            />
-          </button>
+              <rect width="23" height="8" rx="2" fill={variant === "dark" ? "white" : "#4c4c4c"} />
+              <rect y="9" width="23" height="5" rx="2" fill={variant === "dark" ? "white" : "#4c4c4c"} />
+            </svg>
+            <div className="flex items-center gap-[45px]">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`font-poppins text-base font-medium ${
+                    active === link.label ? "text-[#00a63e]" : textColor
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <button
+                type="button"
+                className={`flex items-center gap-1 font-poppins text-base font-medium ${textColor}`}
+              >
+                More Options
+                <Image
+                  src="/icons/chevron-down.svg"
+                  alt=""
+                  width={21}
+                  height={6}
+                  className={`mt-0.5 ${variant === "light" ? "invert" : ""}`}
+                />
+              </button>
+            </div>
+          </div>
         </nav>
 
         <Link

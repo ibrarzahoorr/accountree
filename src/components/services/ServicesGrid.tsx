@@ -10,13 +10,13 @@ const services = [
   {
     title: "Book Keeping",
     desc: bookkeepingDesc,
-    image: "/images/services/spreadsheet-marketing-budget-report-file-concept-1-a92c66bd.png",
+    image: "/images/services/spreadsheet-opt.jpg",
     href: "/services/bookkeeping",
   },
   {
     title: "VAT Returns",
     desc: payrollDesc,
-    image: "/images/services/spreadsheet-marketing-budget-report-file-concept-1-a92c66bd.png",
+    image: "/images/services/spreadsheet-opt.jpg",
     href: "/services/vat-returns",
   },
   {
@@ -81,7 +81,7 @@ export default function ServicesGrid() {
         {services.map((s) => (
           <div key={s.title} className="w-full rounded-2xl bg-[#fbfafa] p-3 sm:mx-auto sm:max-w-[265px]">
             <div className="relative h-[214px] w-full overflow-hidden rounded-xl">
-              <Image src={s.image} alt={s.title} fill className="object-cover" />
+              <Image src={s.image} alt={s.title} fill unoptimized className="object-cover" />
               <div
                 className="absolute inset-x-0 bottom-0 h-1/2"
                 style={{

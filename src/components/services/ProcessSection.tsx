@@ -43,6 +43,7 @@ export default function ProcessSection() {
             src="/images/services/image-6-557a6ee3.png"
             alt="Team discussing process"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>

@@ -34,6 +34,7 @@ export default function ServicesHero() {
             src="/images/services/image-87-99cdac7f.png"
             alt="Accountree team at work"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>

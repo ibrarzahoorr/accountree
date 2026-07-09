@@ -35,13 +35,13 @@ export default function IntroStats() {
 
         <div className="relative grid flex-1 grid-cols-2 gap-4">
           <div className="relative col-span-2 h-[180px] overflow-hidden rounded-2xl sm:h-[244px]">
-            <Image src="/images/about/rectangle-6103-ef8269a7.png" alt="" fill className="object-cover" />
+            <Image src="/images/about/rectangle-6103-ef8269a7.png" alt="" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="relative h-[160px] overflow-hidden rounded-2xl sm:h-[240px]">
-            <Image src="/images/about/rectangle-6102-d6a727bc.png" alt="" fill className="object-cover" />
+            <Image src="/images/about/rectangle-6102-d6a727bc.png" alt="" fill sizes="100vw" className="object-cover" />
           </div>
           <div className="relative h-[160px] overflow-hidden rounded-2xl sm:h-[221px]">
-            <Image src="/images/about/rectangle-6104-1408ac14.png" alt="" fill className="object-cover" />
+            <Image src="/images/about/rectangle-6104-1408ac14.png" alt="" fill sizes="100vw" className="object-cover" />
           </div>
         </div>
       </div>

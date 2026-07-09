@@ -18,6 +18,7 @@ export default function AboutHero() {
         src="/images/about/0-london-england-1920x1080-1-75650c07.png"
         alt="London skyline"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />

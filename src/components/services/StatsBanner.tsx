@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const stats = [
@@ -9,27 +12,53 @@ const stats = [
   { label: "Tax Return Efficiency", value: "15000+ Self-Assessment Tax Returns" },
 ];
 
+const ROW_HEIGHT = 72;
+
 export default function StatsBanner() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActive((i) => (i + 1) % stats.length);
+    }, 2200);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <section className="relative mt-16 w-full overflow-hidden py-10 lg:mt-[161px] lg:h-[431px] lg:py-0">
-      <Image
-        src="/images/services/ecofriendly-building-2e5af841.jpg"
-        alt=""
-        fill
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-black/55" />
-      <div className="relative mx-auto grid max-w-[1512px] grid-cols-1 items-center gap-x-16 gap-y-4 px-6 sm:grid-cols-2 sm:gap-y-6 lg:h-full lg:px-[146px]">
-        {stats.map((s) => (
-          <div key={s.label} className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-            <span className="font-outfit text-base font-medium text-white lg:text-lg">
-              {s.label}
-            </span>
-            <span className="font-outfit text-lg font-medium text-white lg:text-[22px]">
-              {s.value}
-            </span>
-          </div>
-        ))}
+    <section className="mx-auto w-full max-w-[1512px] px-6 pt-16 sm:px-8 lg:px-[146px] lg:pt-40">
+      <div className="relative mx-auto max-w-[1220px] overflow-hidden rounded-[28px]">
+        <Image
+          src="/images/services/ecofriendly-building-2e5af841.jpg"
+          alt=""
+          fill
+          sizes="1220px"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#01b444]/70 via-black/50 to-black/75 backdrop-blur-[2px]" />
+
+        <div className="relative flex flex-col p-6 sm:p-10 lg:p-12">
+          <div
+            className="pointer-events-none absolute left-4 right-4 rounded-full border border-white/40 bg-white/10 shadow-[0_0_24px_rgba(255,255,255,0.15)] backdrop-blur-md transition-transform duration-700 ease-in-out sm:left-8 sm:right-8 lg:left-10 lg:right-10"
+            style={{
+              height: ROW_HEIGHT - 8,
+              transform: `translateY(${active * ROW_HEIGHT + 4}px)`,
+            }}
+          />
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="relative z-10 flex items-center justify-between gap-4 px-4 sm:px-6"
+              style={{ height: ROW_HEIGHT }}
+            >
+              <span className="font-outfit text-sm font-medium text-white sm:text-base lg:text-lg">
+                {s.label}
+              </span>
+              <span className="font-outfit text-base font-medium text-white sm:text-lg lg:text-[22px]">
+                {s.value}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

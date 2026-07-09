@@ -48,6 +48,7 @@ export default function InfrastructureSection() {
               src="/images/about/rectangle-6108-18daf7bf.png"
               alt="Physical infrastructure"
               fill
+              sizes="100vw"
               className="object-cover"
             />
             <div
@@ -80,6 +81,7 @@ export default function InfrastructureSection() {
               src="/images/about/rectangle-6114-0c7d253e.png"
               alt="Security control"
               fill
+              sizes="100vw"
               className="object-cover"
             />
             <div
