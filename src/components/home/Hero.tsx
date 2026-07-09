@@ -82,7 +82,7 @@ export default function Hero() {
                   alt={slide.label}
                   fill
                   sizes="100vw"
-                  className="object-cover"
+                  className="object-cover object-[center_20%]"
                 />
                 <div
                   className="absolute inset-x-0 bottom-0 h-1/2"
@@ -141,29 +141,21 @@ export default function Hero() {
             className="object-cover"
           />
 
-          {/* Green duotone tint + darken */}
+          {/* Green duotone tint – only over the top portion */}
           <div
-            className="absolute inset-x-0 top-0 h-[748px]"
+            className="absolute inset-x-0 top-0 h-[500px]"
             style={{
               background: "linear-gradient(160deg, #94d09f 0%, #3fbc6d 100%)",
-              opacity: 0.55,
+              opacity: 0.45,
               mixBlendMode: "multiply",
             }}
           />
-          <div className="absolute inset-x-0 top-0 h-[748px] bg-black/14" />
 
-          {/* Top gradient for nav legibility */}
+          {/* Top gradient – just enough for nav legibility */}
           <div
-            className="absolute inset-x-0 top-0 h-[396px]"
+            className="absolute inset-x-0 top-0 h-[260px]"
             style={{
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%)",
-            }}
-          />
-          {/* Bottom gradient */}
-          <div
-            className="absolute inset-x-0 h-[392px] top-[455px]"
-            style={{
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%)",
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
             }}
           />
         </div>
@@ -195,7 +187,7 @@ export default function Hero() {
                     alt={slide.label}
                     fill
                     sizes="(max-width: 1200px) 100vw, 1098px"
-                    className="object-cover transition-opacity duration-500"
+                    className="object-cover object-[center_20%] transition-opacity duration-500"
                   />
                   <div
                     className="absolute inset-x-0 bottom-0 h-[175px]"
