@@ -13,23 +13,11 @@ const row2 = [
   "Maximise Profits",
 ];
 
-function CheckPill({ label }: { label: string }) {
+function Pill({ label }: { label: string }) {
   return (
-    <div className="flex items-center gap-2">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="8" cy="8" r="8" fill="#3a9b4b" />
-        <path
-          d="M4.5 8.2L6.7 10.4L11.5 5.6"
-          stroke="white"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span className="font-outfit text-[17px] font-medium text-[#3a9b4b]">
-        {label}
-      </span>
-    </div>
+    <span className="rounded-full border border-[#01b444] px-5 py-2.5 font-outfit text-sm font-medium text-[#01b444] sm:text-base">
+      {label}
+    </span>
   );
 }
 
@@ -57,30 +45,30 @@ export default function BenefitsSection() {
               className="object-cover"
             />
           </div>
-
-          <div className="mt-10 flex flex-col gap-6">
-            <div className="flex flex-wrap gap-x-10 gap-y-6">
-              {row1.map((label) => (
-                <CheckPill key={label} label={label} />
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-x-10 gap-y-6">
-              {row2.map((label) => (
-                <CheckPill key={label + "2"} label={label} />
-              ))}
-            </div>
-          </div>
         </div>
 
         <div className="relative hidden h-[210px] w-[437px] shrink-0 overflow-hidden rounded-2xl lg:block">
           <Image
             src="/images/home/benefits-team-photo-opt.jpg"
-              unoptimized
+            unoptimized
             alt="Team collaborating"
             fill
             sizes="100vw"
             className="object-cover"
           />
+        </div>
+      </div>
+
+      <div className="mt-10 flex flex-col gap-4 lg:mt-14 lg:px-[146px]">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+          {row1.map((label) => (
+            <Pill key={label} label={label} />
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+          {row2.map((label) => (
+            <Pill key={label + "2"} label={label} />
+          ))}
         </div>
       </div>
     </section>
