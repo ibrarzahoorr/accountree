@@ -33,11 +33,11 @@ export default function AboutHero() {
           Outsourcing Partners
         </h1>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:mt-16 sm:gap-8">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-16 sm:gap-4">
           {tags.map((t) => (
             <span
               key={t}
-              className="font-poppins text-base font-semibold tracking-[-0.5px] text-white"
+              className="rounded-full border border-white/20 bg-white/10 px-5 py-2 font-poppins text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:bg-[#01b444] hover:border-[#01b444] cursor-pointer shadow-sm"
             >
               {t}
             </span>
