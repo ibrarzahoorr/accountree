@@ -112,32 +112,32 @@ export default function CTASection({
                   <div className="flex flex-col gap-[11px] sm:flex-row">
                     <input
                       placeholder="First Name"
-                      className="h-[49px] rounded-[11px] border border-[#beaaaa] px-4 font-poppins text-base placeholder:text-black sm:w-1/2"
+                      className="h-[49px] rounded-[11px] border border-[#d0d5dd] px-4 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all sm:w-1/2"
                     />
                     <input
                       placeholder="Last Name"
-                      className="h-[49px] rounded-[11px] border border-[#beaaaa] px-4 font-poppins text-base placeholder:text-black sm:w-1/2"
+                      className="h-[49px] rounded-[11px] border border-[#d0d5dd] px-4 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all sm:w-1/2"
                     />
                   </div>
                   <input
                     placeholder="Email"
-                    className="h-[49px] rounded-[11px] border border-[#beaaaa] px-4 font-poppins text-base placeholder:text-black"
+                    className="h-[49px] rounded-[11px] border border-[#d0d5dd] px-4 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all"
                   />
                   <input
                     placeholder="Phone number"
-                    className="h-[49px] rounded-[11px] border border-[#beaaaa] px-4 font-poppins text-base placeholder:text-black"
+                    className="h-[49px] rounded-[11px] border border-[#d0d5dd] px-4 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all"
                   />
                   <input
                     placeholder="Company name"
-                    className="h-[49px] rounded-[11px] border border-[#beaaaa] px-4 font-poppins text-base placeholder:text-black"
+                    className="h-[49px] rounded-[11px] border border-[#d0d5dd] px-4 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all"
                   />
                   <textarea
                     placeholder="Enquiry message"
-                    className="h-[102px] resize-none rounded-[11px] border border-[#beaaaa] px-4 py-3 font-poppins text-base placeholder:text-black"
+                    className="h-[102px] resize-none rounded-[11px] border border-[#d0d5dd] px-4 py-3 font-poppins text-base placeholder:text-gray-400 focus:border-[#00a63e] focus:ring-2 focus:ring-[#00a63e]/20 outline-none transition-all"
                   />
                   <button
                     type="submit"
-                    className="mt-1 h-[49px] rounded-[11px] bg-[#00a63e] font-poppins text-base font-bold text-[#efefef]"
+                    className="mt-1 h-[49px] rounded-[11px] bg-[#00a63e] font-poppins text-base font-bold text-[#efefef] hover:bg-[#008d34] transition-colors duration-300 cursor-pointer"
                   >
                     Submit
                   </button>

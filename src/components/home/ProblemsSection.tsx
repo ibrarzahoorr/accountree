@@ -107,9 +107,9 @@ export default function ProblemsSection() {
         sounds familiar?
       </h3>
 
-      <div className="mt-10 flex flex-col gap-3 lg:mt-[97px] lg:pl-[147px]">
+      <div className="mt-10 flex flex-col gap-3 lg:mt-[97px] lg:pl-[147px] lg:pr-[147px]">
         <div className="flex flex-col gap-3 lg:flex-row lg:gap-[11px]">
-          <div className="relative w-full overflow-hidden rounded-xl bg-[#efefef] px-6 py-5 lg:w-[670px] lg:px-[38px] lg:py-[18px]">
+          <div className="relative w-full lg:flex-[670] overflow-hidden rounded-xl bg-white border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.015)] px-6 py-5 lg:px-[38px] lg:py-[18px] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.05)] hover:border-[#3a9b4b]/20 hover:-translate-y-0.5">
             <h4 className="font-poppins text-xl font-semibold leading-[30px] tracking-[-0.61px] text-[#3a9b4b] lg:text-2xl lg:leading-[43px]">
               Hiring the right resource in UK
             </h4>
@@ -123,7 +123,7 @@ export default function ProblemsSection() {
               <UKMapIcon />
             </div>
           </div>
-          <div className="relative w-full overflow-hidden rounded-xl bg-[#efefef] px-6 py-5 lg:w-[529px] lg:px-[38px] lg:py-[18px]">
+          <div className="relative w-full lg:flex-[529] overflow-hidden rounded-xl bg-white border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.015)] px-6 py-5 lg:px-[38px] lg:py-[18px] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.05)] hover:border-[#3a9b4b]/20 hover:-translate-y-0.5">
             <h4 className="font-poppins text-xl font-semibold leading-[30px] tracking-[-0.61px] text-[#3a9b4b] lg:text-2xl lg:leading-[43px]">
               Losing new clients
             </h4>
@@ -139,7 +139,7 @@ export default function ProblemsSection() {
         </div>
 
         <div className="flex flex-col gap-3 lg:flex-row lg:gap-[11px]">
-          <div className="relative w-full overflow-hidden rounded-xl bg-[#efefef] px-6 py-5 lg:w-[486px] lg:px-[38px] lg:py-[18px]">
+          <div className="relative w-full lg:flex-[486] overflow-hidden rounded-xl bg-white border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.015)] px-6 py-5 lg:px-[38px] lg:py-[18px] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.05)] hover:border-[#3a9b4b]/20 hover:-translate-y-0.5">
             <h4 className="font-poppins text-xl font-semibold leading-[30px] tracking-[-0.61px] text-[#3a9b4b] lg:text-2xl lg:leading-[43px]">
               Growth vs workload
             </h4>
@@ -152,7 +152,7 @@ export default function ProblemsSection() {
               <BarChartIcon />
             </div>
           </div>
-          <div className="relative w-full overflow-hidden rounded-xl bg-[#efefef] px-6 py-5 lg:w-[713px] lg:px-[38px] lg:py-[18px]">
+          <div className="relative w-full lg:flex-[713] overflow-hidden rounded-xl bg-white border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.015)] px-6 py-5 lg:px-[38px] lg:py-[18px] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.05)] hover:border-[#3a9b4b]/20 hover:-translate-y-0.5">
             <h4 className="font-poppins text-xl font-semibold leading-[30px] tracking-[-0.61px] text-[#3a9b4b] lg:text-2xl lg:leading-[43px]">
               Profitability &amp; Margins
             </h4>

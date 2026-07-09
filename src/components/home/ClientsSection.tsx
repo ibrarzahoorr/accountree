@@ -43,15 +43,15 @@ export default function ClientsSection() {
         exact way of working
       </p>
 
-      <div className="relative mx-auto mt-8 flex max-w-[1109px] items-center justify-center gap-4 lg:mt-12 lg:h-[557px]">
-        <div className="relative hidden h-[463px] w-[437px] shrink-0 -rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
+      <div className="relative mx-auto mt-8 flex max-w-[1400px] w-full items-center justify-center gap-4 px-6 lg:mt-12 lg:h-[557px] lg:px-12">
+        <div className="relative hidden h-[463px] lg:flex-[437] max-w-[437px] -rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
           <Image
             src="/images/home/benefits-team-photo-opt.jpg"
             unoptimized
             alt="Partner firm"
             fill
             sizes="437px"
-            className="object-cover"
+            className="object-cover object-[70%_center]"
           />
           <div
             className="absolute inset-x-0 bottom-0 h-[233px]"
@@ -61,7 +61,7 @@ export default function ClientsSection() {
           />
         </div>
 
-        <div className="relative z-10 h-[420px] w-full overflow-hidden rounded-[21px] shadow-xl sm:h-[480px] lg:h-[557px] lg:w-[526px] lg:shrink-0">
+        <div className="relative z-10 h-[420px] w-full overflow-hidden rounded-[21px] shadow-xl sm:h-[480px] lg:h-[557px] lg:flex-[526] max-w-[526px]">
           <Image
             src="/images/home/partner-photo-3-opt.jpg"
             unoptimized
@@ -87,7 +87,7 @@ export default function ClientsSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[463px] w-[437px] shrink-0 rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
+        <div className="relative hidden h-[463px] lg:flex-[437] max-w-[437px] rotate-[4deg] overflow-hidden rounded-[21px] shadow-xl lg:block">
           <Image
             src="/images/home/partner-photo-2-opt.jpg"
             unoptimized

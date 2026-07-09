@@ -80,7 +80,7 @@ export default function SolutionSection() {
               alt="Accountree team presenting"
               fill
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-[60%_center]"
             />
           </div>
 
@@ -120,7 +120,7 @@ export default function SolutionSection() {
             alt="Accountree team presenting"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[60%_center]"
           />
         </div>
       </div>

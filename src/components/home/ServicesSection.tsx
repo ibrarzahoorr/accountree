@@ -31,9 +31,9 @@ function ServiceCard({
   activeClients,
 }: (typeof cards)[number]) {
   return (
-    <div className="relative w-full max-w-[335px] rounded-[27px] bg-[#fbfafa] p-[17px]">
-      <div className="relative h-[243px] w-full overflow-hidden rounded-2xl">
-        <Image src={image} alt={title} fill unoptimized className="object-cover" />
+    <div className="relative w-full max-w-[335px] rounded-[27px] bg-[#fbfafa] border border-[#f0f0f0] p-[17px] shadow-[0_4px_25px_rgba(0,0,0,0.015)] transition-all duration-300 hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+      <div className="relative h-[243px] w-full overflow-hidden rounded-2xl group/img">
+        <Image src={image} alt={title} fill unoptimized className="object-cover transition-transform duration-500 group-hover/img:scale-105" />
         <div
           className="absolute inset-x-0 bottom-0 h-[156px]"
           style={{
@@ -81,7 +81,7 @@ function ServiceCard({
         </div>
         <button
           type="button"
-          className="h-[50px] w-[145px] rounded-full border border-[#00a63e] font-poppins text-lg tracking-[-0.71px] text-[#00a63e]"
+          className="h-[50px] w-[145px] rounded-full border border-[#00a63e] bg-transparent font-poppins text-lg tracking-[-0.71px] text-[#00a63e] hover:bg-[#00a63e] hover:text-white transition-all duration-300 cursor-pointer"
         >
           Enquire
         </button>

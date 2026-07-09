@@ -107,7 +107,7 @@ export default function Hero() {
 
           {/* Video thumbnail */}
           <div
-            className="absolute left-[247px] top-[460px] h-[456px] w-[1098px] rounded-[18px]"
+            className="absolute left-1/2 top-[460px] h-[456px] w-[1098px] max-w-[calc(100%-48px)] -translate-x-1/2 rounded-[18px]"
             style={{ boxShadow: "9.15px -10.98px 58.56px rgba(0,0,0,0.17)" }}
           >
             <div className="relative h-full w-full overflow-hidden rounded-[18px]">
@@ -115,7 +115,7 @@ export default function Hero() {
                 src="/images/home/hero-video-thumb.png"
                 alt="Learn the accountree model"
                 fill
-                sizes="100vw"
+                sizes="(max-width: 1200px) 100vw, 1098px"
                 className="object-cover"
               />
               <div
@@ -128,32 +128,36 @@ export default function Hero() {
               <button
                 type="button"
                 aria-label="Play video"
-                className="absolute left-[494px] top-[169px] h-[111px] w-[111px]"
+                className="absolute left-1/2 top-1/2 h-[111px] w-[111px] -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 hover:scale-110 hover:brightness-110 active:scale-95 cursor-pointer"
               >
-                <Image src="/icons/play-circle.svg" alt="" fill />
+                <Image src="/icons/play-circle.svg" alt="Play Video" fill />
               </button>
 
-              <span className="absolute left-[38px] top-[403px] font-poppins text-base font-medium tracking-[-0.16px] text-white">
-                Learn accountree model
-              </span>
+              <div className="absolute inset-x-0 bottom-6 z-10 flex items-center justify-between px-9">
+                <span className="font-poppins text-base font-medium tracking-[-0.16px] text-white">
+                  Learn accountree model
+                </span>
 
-              <div className="absolute left-[482px] top-[407px] flex h-[24px] w-[135px] items-center gap-2">
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="#d9d9d9" opacity="0.72" className="shrink-0">
-                  <path d="M13 0v12L4 6l9-6z" />
-                  <rect x="0" width="2" height="12" />
-                </svg>
-                <div className="h-[10px] flex-1 rounded-full bg-[#d9d9d9]" />
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="#d9d9d9" className="shrink-0">
-                  <path d="M0 0v12l9-6-9-6z" />
-                  <rect x="11" width="2" height="12" />
-                </svg>
-              </div>
+                <div className="flex h-[24px] w-[135px] items-center gap-2">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="#d9d9d9" opacity="0.72" className="shrink-0 cursor-pointer hover:opacity-100 transition-opacity">
+                    <path d="M13 0v12L4 6l9-6z" />
+                    <rect x="0" width="2" height="12" />
+                  </svg>
+                  <div className="h-[10px] flex-1 rounded-full bg-[#d9d9d9]" />
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="#d9d9d9" className="shrink-0 cursor-pointer hover:opacity-100 transition-opacity">
+                    <path d="M0 0v12l9-6-9-6z" />
+                    <rect x="11" width="2" height="12" />
+                  </svg>
+                </div>
 
-              <div className="absolute left-[990px] top-[404px] h-6 w-6">
-                <Image src="/icons/volume.svg" alt="" fill />
-              </div>
-              <div className="absolute left-[1045px] top-[404px] h-5 w-5">
-                <Image src="/icons/maximize.svg" alt="" fill />
+                <div className="flex items-center gap-5">
+                  <div className="relative h-6 w-6 cursor-pointer hover:scale-110 transition-transform">
+                    <Image src="/icons/volume.svg" alt="Volume" fill />
+                  </div>
+                  <div className="relative h-5 w-5 cursor-pointer hover:scale-110 transition-transform">
+                    <Image src="/icons/maximize.svg" alt="Maximize" fill />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
